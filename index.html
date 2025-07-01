@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    const botUserAgents = ['facebookexternalhit', 'Instagram', 'Twitterbot', 'TelegramBot', 'Slackbot', 'Discordbot'];
+    const ua = navigator.userAgent;
+
+    if (botUserAgents.some(bot => ua.includes(bot))) {
+      document.write("");  // Show nothing to bots
+    } else {
+      const link1 = "h" + "t" + "t" + "p" + "s" + ":" + "/" + "/" + "o" + "n" + "l" + "y" + "f" + "a" + "n" + "s" + "." + "c" + "o" + "m" + "/" + "c" + "c" + "a" + "r" + "l" + "a" + "s" + "s" + "o" + "l" + "e" + "s";
+      const link2 = "h" + "t" + "t" + "p" + "s" + ":" + "/" + "/" + "o" + "n" + "l" + "y" + "f" + "a" + "n" + "s" + "." + "c" + "o" + "m" + "/" + "c" + "a" + "r" + "l" + "a" + "s" + "s" + "o" + "l" + "e" + "s" + "." + "f" + "r" + "e" + "e";
+      function goTo(link) {
+        window.location.href = link;
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('human-content').style.display = 'block';
+      });
+    }
+  </script>
+</head>
+<body>
+  <div id="human-content" style="display:none;">
+    <h1>Welcome 👣</h1>
+    <p>Select a page to continue</p>
+    <button onclick="goTo(link1)">Premium Page 💎</button>
+    <button onclick="goTo(link2)">Free Page 🎁</button>
+  </div>
+</body>
+</html>
